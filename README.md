@@ -19,7 +19,7 @@ Following are the __APIs used__ for this assignment<br/>
 3. https://api.exchangeratesapi.io/history?start_at=2018-01-01&end_at=2018-09-01 <br/>
 
 ### JSON Basics:
-The data received will be in the form of JSON representation as shown below:\
+- The data received will be in the form of JSON representation as shown below:\
 {\
 "base": "EUR",\
 "date": "2018-04-08",\
@@ -33,13 +33,17 @@ The data received will be in the form of JSON representation as shown below:\
 ...\
 }\
 }
+- In case you want to learn more about JSON data type you can refer to the guide on
+using json module to process the data encoded in JSON.
+http://docs.pythonguide.org/en/latest/scenarios/json/<br/>
+__Note: We will process the response using only string operation. Module json is not used in this assignment.__
 ### Error Handling
 Note: Date Format : yyyy-mm-dd
 If an invalid query is entered,following response pops up:
 ```
 {"error":"time data 'message' does not match format '%Y-%m-%d'"}
 ```
-## Getting the data
+## Queries for Getting the data
 - Python provides us with various sets of pre-defined functions which we can directly call
 to perform tasks. Such a set of functions is called a module. In order to use these
 functions, you will have to import it’s corresponding module first.
@@ -53,4 +57,21 @@ Example:
 url = urllib.request.urlopen(​ "https://api.exchangeratesapi.io/latest"​ )
 data = url.read()
 ```
+#### Latest Currency Exchange Rates Query
+This function is responsible to get latest current exchange rates.
+```
+def getLatestRates():
+    """Returns: a JSON string that is a response to a latest rates query.
+       The Json string will have the attributes: rates, base and date (yyyy-mm-dd).
+    """
+    url=urlopen("https://api.exchangeratesapi.io/latest")
+    data=url.read()
+    return data
+```
+## Queries for Processing Data 
 
+Once we have implemented getLatestRates() correctly, we have the currency
+exchange data in the form of a string. 
+Now we will process it and apply __String module functions__ (you don’t need to import any modules for this) to perform the following queries.
+ #### Original currency to Desired currency change query
+ 
