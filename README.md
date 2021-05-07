@@ -120,7 +120,7 @@ of this module, get the day of the week on a particular date.
 - With a given startDate and an endDate as strings (a sample date is:
 “2019-09-23” which represents 23rd September 2019),edit the third link so as 
 to get data ranging from startDate to endDate. 
-- Once we have this data, we __find among all the Fridays that are present there, on which of them was a particular currency strongest and on which one was it the weakest__.
+- Once we have this data, we __find among all the Fridays that are present there, on which of them was a particular currency strongest and on which one was it the weakest__.<br/>
 __Example__:
 for the function call extremeFridays(“2017-01-01”, “2017-12-31”,“INR”) is:
 ![](https://github.com/ashcode028/Making-URL-queries/blob/f0043620fe0b2148ec8a9f01f2575db0d9254499/ip.png)
@@ -168,6 +168,7 @@ Parameters: stardDate and endDate: strings of the form yyyy-mm-dd
             print(c)
             c+=timedelta(1)
 ```
+[Sample code consisiting of all queries](ip_assignment1.py)
 ## 3. Testing the Data
 - Once we have correctly implemented the above functions, we can test whether the
 code you have written is correct or not.
