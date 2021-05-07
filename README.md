@@ -8,6 +8,7 @@ Here, I will cover what I learnt and all the necessary resources required on the
 - Basic knowledge about JSON. 
 - Making URL queries and reading their output.
 - Testing using unittest
+- Basic sorting algorithms
 
 For this assignment, we will access the data of __currency exchange rates__ from the
 open source website https://exchangeratesapi.io/. You can access the data using the
